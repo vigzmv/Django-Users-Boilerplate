@@ -40,10 +40,6 @@
                             <li>
                                 <a href="#">Something else here</a>
                             </li>
-                            <li class="divider"></li>
-                            <!--<li>
-                                                <a href="#">Separated link</a>
-                                            </li> -->
                             {% if user.is_authenticated %}
                             <li class="divider"></li>
                             <li>
@@ -63,6 +59,7 @@
     <!-- Core Scripts - Include with every page -->
     <script src="{% static 'App/js/jquery.min.js' %}"></script>
     <script src="{% static 'App/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'App/js/script.js' %}"></script>
     {% block javascript %} {% endblock %}
 
 
