@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Django Users Boilerplate by vigzmv</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Django Users Boilerplate</h1>
+      <h2 class="project-tagline">A Django boilerplate with User Registeration, Login and Password change views.     This boilerplate can be used to create Django projects with user management. Uses Django Auth for the Authentication Views.</h2>
+      <a href="https://github.com/vigzmv/Django-Users-Boilerplate" class="btn">View on GitHub</a>
+      <a href="https://github.com/vigzmv/Django-Users-Boilerplate/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/vigzmv/Django-Users-Boilerplate/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="django-users-boilerplate" class="anchor" href="#django-users-boilerplate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Django Users Boilerplate</h1>
+
+<h3>
+<a id="a-django-boilerplate-with-user-registeration-login-and-password-change-views" class="anchor" href="#a-django-boilerplate-with-user-registeration-login-and-password-change-views" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A Django boilerplate with User Registeration, Login and Password change views.</h3>
+
+<p>This boilerplate can be used to create Django projects with user management quicker.
+Uses Django Auth for the Authentication Views.</p>
+
+<p>Made by <a href="https://github.com/vigzmv">vigzmv</a></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-source-shell"><pre>  <span class="pl-c"># Get project locally</span>
+  $ git clone https://github.com/vigzmv/Django-Users-boilerplate.git
+
+  <span class="pl-c"># Rename directory</span>
+  $ mv Django-Users-boilerplate <span class="pl-k">**</span>Your_project_dir_name<span class="pl-k">**</span>
+  $ <span class="pl-c1">cd</span> <span class="pl-k">**</span>Your_project_dir_name<span class="pl-k">**</span>
+
+  <span class="pl-c"># Install requirements</span>
+  $ pip install -r requirements.txt
+
+  <span class="pl-c"># Runserver</span>
+  $ python manage.py runserver
+
+  <span class="pl-c"># Done! Make required changes in 'App' as required to create your Django App.</span></pre></div>
+
+<p><br></p>
+
+<h2>
+<a id="customisation" class="anchor" href="#customisation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customisation</h2>
+
+<h3>
+<a id="user-registration-fields" class="anchor" href="#user-registration-fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>User registration fields</h3>
+
+<p>The fields of User object can be changed by editing the required 'fields' in App/forms.py.</p>
+
+<div class="highlight highlight-source-python"><pre><span class="pl-k">class</span> <span class="pl-en">UserSignUpForm</span>(<span class="pl-e">forms</span>.<span class="pl-e">ModelForm</span>):
+ <span class="pl-k">class</span> <span class="pl-en">Meta</span>:
+  model <span class="pl-k">=</span> User
+
+  <span class="pl-c"># change fields of User Object here</span>
+  fields <span class="pl-k">=</span> (<span class="pl-s"><span class="pl-pds">'</span>username<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>password<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>email<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>first_name<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>last_name<span class="pl-pds">'</span></span>,)
+
+  help_texts <span class="pl-k">=</span> {
+   <span class="pl-s"><span class="pl-pds">'</span>username<span class="pl-pds">'</span></span>: <span class="pl-c1">None</span>,
+   }
+  widgets <span class="pl-k">=</span> {
+  <span class="pl-s"><span class="pl-pds">'</span>password<span class="pl-pds">'</span></span>:forms.PasswordInput(),
+  }</pre></div>
+
+<p>Refer Docs: <a href="https://docs.djangoproject.com/en/1.10/ref/contrib/auth/">https://docs.djangoproject.com/en/1.10/ref/contrib/auth/</a></p>
+
+<h2>
+<a id="also-included" class="anchor" href="#also-included" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Also included</h2>
+
+<ul>
+<li>bootstrap-v3.3.6-min.css</li>
+<li>bootstrap-v3.3.6-min.js</li>
+<li>jquery-v2.2.0.min.js</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/vigzmv/Django-Users-Boilerplate">Django Users Boilerplate</a> is maintained by <a href="https://github.com/vigzmv">vigzmv</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
