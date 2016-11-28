@@ -1,0 +1,40 @@
+{% if form.errors %}
+
+<p>Please fill correct details</p>
+{% endif %} {% if next %} {% if user.is_authenticated %}
+
+<p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
+{% else %} {% endif %} {% endif %}
+
+
+<form method="post" action="">
+    {% csrf_token %}
+
+
+    <table>
+        <tr>
+            <td>{{ form.first_name.label_tag }}</td>
+            <td>{{ form.first_name }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.last_name.label_tag }}</td>
+            <td>{{ form.last_name }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.username.label_tag }}</td>
+            <td>{{ form.username }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.email.label_tag }}</td>
+            <td>{{ form.email }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.password.label_tag }}</td>
+            <td>{{ form.password }}</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Register" />
+
+    <input type="hidden" name="next" value="{{ next }}" />
+</form>
