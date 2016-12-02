@@ -1,7 +1,7 @@
 # Django Users Boilerplate
 
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=102)](https://github.com/vigzmv/Django-Users-boilerplate)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/vigzmv/Django-Users-boilerplate)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=102)](https://github.com/vigzmv/Django-Users-boilerplate)  &nbsp;&nbsp;
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/vigzmv/Django-Users-boilerplate)  &nbsp;&nbsp;
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/vigzmv/Django-Users-boilerplate)
 
 ### A Django boilerplate with User Registeration, Login and Password change views.    
